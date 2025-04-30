@@ -170,14 +170,14 @@ public class MetodosOrdenamiento {
             for (; i >= 0 && arreglo[j] > actual; j++) {
                 arreglo[j + 1] = arreglo[j];
             }
-            arreglo[i + 1] = actual;
+            arreglo[j + 1] = actual;
         }
         return arreglo;
     }
 
     // Método de inserción con errores
-    // Error encontrado: en el int i = j esta el error ya que falta el -1 y en el while tambien esta el error y en el return no devuelve el arreglo 
-    //Solucion a
+    // Error encontrado: en el int i = j esta el error ya que falta el -1 y en el while tambien esta el error estaba mayor a cero y en el key estaba el signo contrario y no esta return arreglo 
+    //Solucion agregar el int i = j-1, y en el while poner mayorigual a cero y mayor a key y en el retunr agregar el arreglo 
     public int[] insercionTercero(int[] arregloOriginal) {
 
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
