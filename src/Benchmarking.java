@@ -7,19 +7,19 @@ public class Benchmarking {
         long currentMillis=System.currentTimeMillis();
         long currentNano = System.nanoTime();
 
-        System.out.println(currentMillis);
-        System.out.println(currentNano);
+        // System.out.println(currentMillis);
+        // System.out.println(currentNano);
 
-        mOrdenamiento = new MetodosOrdenamiento();
-        int [] arreglo =generarArregloAleatorio(1000000);
+        // mOrdenamiento = new MetodosOrdenamiento();
+        // int [] arreglo =generarArregloAleatorio(1000000);
 
-        Runnable tarea = () -> mOrdenamiento.burbujaTradicional(arreglo);
+        // Runnable tarea = () -> mOrdenamiento.burbujaTradicional(arreglo);
 
-        double tiempoDuracionMillis = medirConCurrentTimeMiles(tarea);
-        double tiempoDuracionNano = medirConNanoTime(tarea);
+        // double tiempoDuracionMillis = medirConCurrentTimeMiles(tarea);
+        // double tiempoDuracionNano = medirConNanoTime(tarea);
 
-        System.out.println( "tiempo en milisegundos: "+tiempoDuracionMillis);
-        System.out.println( "tiempo en nanosegundis: "+tiempoDuracionNano);
+        // System.out.println( "tiempo en milisegundos: "+tiempoDuracionMillis);
+        // System.out.println( "tiempo en nanosegundis: "+tiempoDuracionNano);
     }
     
     

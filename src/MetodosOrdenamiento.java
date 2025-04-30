@@ -159,7 +159,8 @@ public class MetodosOrdenamiento {
     }
 
     // Método de inserción con errores
-    // Error encontrado:
+    // Error encontrado: el segundo for estaba en orden de arreglo en j 
+    //Solucion es cambiar y ponerle en modo de i al segundo de foro por que estaba en base a j y por eso dabe el error
     public int[] insercionSegundo(int[] arregloOriginal) {
 
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
@@ -167,10 +168,10 @@ public class MetodosOrdenamiento {
             int actual = arreglo[j];
 
             int i = j - 1;
-            for (; i >= 0 && arreglo[j] > actual; j++) {
-                arreglo[j + 1] = arreglo[j];
+            for (; i >= 0 && arreglo[i] > actual; i--) {
+                arreglo[i + 1] = arreglo[i];
             }
-            arreglo[j + 1] = actual;
+            arreglo[i + 1] = actual;
         }
         return arreglo;
     }
