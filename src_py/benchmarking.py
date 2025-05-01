@@ -7,7 +7,7 @@ class Benchmarking:
         print("Bemchmarkin instanciado")
         self.mO=Metodos_Ordenamiento()
 
-        arreglo = self.build_arreglo(50000)
+        arreglo = self.build_arreglo(10000)
         tarea = lambda: self.mO.sort_Bubble(arreglo)
         tiempo_milisegundos= self.contar_con_current_time_milles(tarea)
         tiempo_nanosegundos=self.contar_con_nano_time(tarea)
@@ -26,6 +26,11 @@ class Benchmarking:
         tarea = lambda: self.mO.sort_seleccion(arreglo)
         tiempo_nanosegundos=self.contar_con_nano_time(tarea)
         print(f"Tiempo con Seleccion  en nanossegundos : {tiempo_nanosegundos}")
+
+
+        tarea = lambda: self.mO.sort_shell(arreglo)
+        tiempo_nanosegundos=self.contar_con_nano_time(tarea)
+        print(f"Tiempo con shell en nanossegundos : {tiempo_nanosegundos}")
 
 
 
